@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-zinc-800;
+}
+@layer base {
+  h1 {
+    @apply font-mont;
+  }
+  h2 {
+    @apply font-lato;
+  }
+}
+@layer components {
+  .header-main {
+    @apply bg-gradient-to-r from-amber-100 from-10% to-amber-300 text-transparent bg-clip-text my-4;
+  }
+  .header-link {
+    @apply font-extrabold bg-gradient-to-r from-amber-100 from-50% to-cyan-500 text-transparent bg-clip-text my-4;
+  }
+  .title {
+    @apply bg-gradient-to-r from-amber-100 from-10% to-amber-300 text-transparent bg-clip-text my-4 pb-2 text-6xl font-bold;
+  }
+  .subtitle {
+    @apply font-extrabold bg-gradient-to-r from-amber-100 from-40% to-cyan-500 text-transparent bg-clip-text my-4 text-xl;
+  }
+}
