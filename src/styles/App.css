@@ -49,6 +49,10 @@
   height: 4px; /* Border thickness */
   border-bottom-left-radius: 8px; /* Adjust this value to change the roundness */
   border-bottom-right-radius: 8px; /* Adjust this value to change the roundness */
-  background: rgb(42,183,202);
-  background: linear-gradient(90deg, rgba(42,183,202,1) 0%, rgba(214,212,160,1) 100%);
+  background: rgb(42, 183, 202);
+  background: linear-gradient(
+    90deg,
+    rgba(42, 183, 202, 1) 0%,
+    rgba(214, 212, 160, 1) 100%
+  );
 }

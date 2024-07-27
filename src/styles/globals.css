@@ -26,4 +26,7 @@ body {
   .subtitle {
     @apply font-extrabold bg-gradient-to-r from-amber-100 from-40% to-cyan-500 text-transparent bg-clip-text my-4 text-xl;
   }
+  .skill-name {
+    @apply text-sm text-center bg-gradient-to-r from-amber-100 from-40% to-cyan-500 text-transparent bg-clip-text my-4;
+  }
 }
