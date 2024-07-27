@@ -7,6 +7,9 @@ module.exports = {
         mont: ["Montserrat", "sans-serif"],
         lato: ["Lato", "sans-serif"],
       },
+      animation: {
+        "rainbow-text": "rainbow-text 5s linear infinite",
+      },
     },
   },
 

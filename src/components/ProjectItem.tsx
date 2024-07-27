@@ -18,8 +18,12 @@ const ProjectItem: React.FC<ProjectItemProps> = ({
   return (
     <div className='flex w-full max-w-4xl mb-6'>
       {/* Main Project Showcase */}
-      <div className='flex-[7] bg-gray-200 p-4 rounded-lg shadow-lg h-96'>
-        <img src={imageUrl} alt={title} className='w-full h-full rounded-lg' />
+      <div className='hidden lg:block flex-[7] p-4 rounded-lg shadow-lg h-96'>
+        <img
+          src={imageUrl}
+          alt={title}
+          className='w-full h-full rounded-lg hover:scale-105 hover:-translate-y-10 duration-500'
+        />
       </div>
 
       {/* Project Title and Buttons */}
@@ -29,7 +33,7 @@ const ProjectItem: React.FC<ProjectItemProps> = ({
         <div className='flex space-x-4 mt-4'>
           <a
             href={visitLink}
-            className='bg-amber-200 w-48 text-center text-zinc-800 font-extrabold font-lato px-4 py-2 rounded-lg hover:bg-cyan-200 transition-colors'
+            className='border w-48 text-center text-amber-200 font-extrabold font-lato px-4 py-2 rounded-lg hover:scale-110  transition-all duration-500'
             target='_blank'
             rel='noopener noreferrer'
           >

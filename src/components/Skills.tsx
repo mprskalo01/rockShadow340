@@ -10,11 +10,11 @@ const Skills: React.FC = () => {
           title='Front-End'
           skills={[
             { name: "React", icon: <Icons.ReactIcon /> },
-            { name: "JavaScript", icon: <Icons.JavaScriptIcon /> },
             { name: "TypeScript", icon: <Icons.TypeScriptIcon /> },
+            { name: "Next.js", icon: <Icons.NextIcon /> },
             { name: "HTML", icon: <Icons.HtmlIcon /> },
             { name: "CSS", icon: <Icons.CSSIcon /> },
-            { name: "Next.js", icon: <Icons.NextIcon /> },
+            { name: "JavaScript", icon: <Icons.JavaScriptIcon /> },
           ]}
         />
         <SkillCategory

@@ -24,6 +24,7 @@ const Header: React.FC = () => {
             </li>
           </ul>
         </nav> */}
+        <button className='animate-rainbow-text'>Colors</button>
       </div>
     </header>
   );

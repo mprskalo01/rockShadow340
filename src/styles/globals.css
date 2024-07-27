@@ -30,3 +30,34 @@ body {
     @apply text-sm text-center bg-gradient-to-r from-amber-100 from-40% to-cyan-500 text-transparent bg-clip-text my-4;
   }
 }
+
+@keyframes rainbow-text {
+  0% {
+    color: #ff0000;
+  }
+  14% {
+    color: #ff7f00;
+  }
+  28% {
+    color: #ffff00;
+  }
+  42% {
+    color: #00ff00;
+  }
+  57% {
+    color: #0000ff;
+  }
+  71% {
+    color: #8b00ff;
+  }
+  85% {
+    color: #ff00ff;
+  }
+  100% {
+    color: #ff0000;
+  }
+}
+
+.animate-rainbow-text {
+  animation: rainbow-text 5s linear infinite;
+}

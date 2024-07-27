@@ -30,7 +30,7 @@ const Projects: React.FC = () => {
   ];
 
   return (
-    <div className='flex flex-col items-center justify-center w-full max-w-screen-lg mx-auto mt-40 gap-44'>
+    <div className='flex flex-col items-center justify-center w-4/6 max-w-screen-lg mx-auto mt-40 gap-44'>
       {projects.map((project, index) => (
         <ProjectItem
           key={index}

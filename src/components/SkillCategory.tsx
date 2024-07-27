@@ -18,7 +18,7 @@ const SkillCategory: React.FC<SkillCategoryProps> = ({ title, skills }) => {
         {skills.map((skill, index) => (
           <div
             key={index}
-            className='group aspect-square flex flex-col items-center justify-center p-4 hover:scale-110 transition-all duration-500'
+            className='group aspect-square flex flex-col items-center justify-center p-4 hover:scale-110 transition-all duration-500 shadow-2xl'
           >
             <div className='mb-2 w-12 h-12'>{skill.icon}</div>
             <h2 className=' skill-name group-hover:scale-125 transition-all duration-500'>
