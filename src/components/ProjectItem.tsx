@@ -16,9 +16,9 @@ const ProjectItem: React.FC<ProjectItemProps> = ({
   githubLink,
 }) => {
   return (
-    <div className='flex w-full max-w-4xl mb-6'>
+    <div className='flex flex-col xl:flex-row w-full max-w-4xl mb-6 mx-auto '>
       {/* Main Project Showcase */}
-      <div className='hidden lg:block flex-[7] p-4 rounded-lg shadow-lg h-96'>
+      <div className='flex-[7] p-4 rounded-lg shadow-lg h-96 w-full xl:w-auto'>
         <img
           src={imageUrl}
           alt={title}
@@ -27,13 +27,13 @@ const ProjectItem: React.FC<ProjectItemProps> = ({
       </div>
 
       {/* Project Title and Buttons */}
-      <div className='flex-[3] ml-6 flex flex-col justify-center'>
+      <div className='flex-[3] xl:ml-6 mt-6 xl:mt-0 flex flex-col justify-center'>
         <h1 className='title'>{title}</h1>
         <h2 className='subtitle'>{description}</h2>
         <div className='flex space-x-4 mt-4'>
           <a
             href={visitLink}
-            className='border w-48 text-center text-amber-200 font-extrabold font-lato px-4 py-2 rounded-lg hover:scale-110  transition-all duration-500'
+            className='border-gradient w-48 text-center bg-gradient-to-r from-zinc-900 via-zinc-800 to-zinc-700 text-amber-200 font-extrabold font-lato px-4 py-2 rounded-lg transition-transform duration-500 hover:scale-110'
             target='_blank'
             rel='noopener noreferrer'
           >
@@ -43,7 +43,7 @@ const ProjectItem: React.FC<ProjectItemProps> = ({
             href={githubLink}
             target='_blank'
             rel='noopener noreferrer'
-            className='bg-amber-100 flex items-center justify-center p-2 rounded-full hover:bg-cyan-200 transition-colors'
+            className='bg-amber-100 flex items-center justify-center p-2 rounded-full hover:github-link transition-all duration-500 ease-in-out'
             aria-label='Visit GitHub'
           >
             <svg

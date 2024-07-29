@@ -4,8 +4,8 @@ import Icons from "../assets/Icons";
 
 const Skills: React.FC = () => {
   return (
-    <div className='container px-6 py-12 mx-auto w-4/6 max-w-screen-lg'>
-      <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
+    <div className='container px-6 mx-auto width-custom'>
+      <div className='grid grid-cols-1 xl:grid-cols-3 gap-8'>
         <SkillCategory
           title='Front-End'
           skills={[
