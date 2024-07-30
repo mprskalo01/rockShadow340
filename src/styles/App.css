@@ -56,3 +56,22 @@
     rgba(214, 212, 160, 1) 100%
   );
 }
+.color-border-gradient {
+  position: relative;
+}
+.color-border-gradient::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px; /* Border thickness */
+  border-bottom-left-radius: 8px; /* Adjust this value to change the roundness */
+  border-bottom-right-radius: 8px; /* Adjust this value to change the roundness */
+  background: rgb(42, 183, 202);
+  background: linear-gradient(
+    90deg,
+    rgba(237, 7, 210, 0.8) 0%,
+    rgba(255, 75, 253, 0.8) 100%
+  );
+}

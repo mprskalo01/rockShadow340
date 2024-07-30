@@ -11,7 +11,9 @@ const Hero: React.FC = () => {
         </h1>
       </div>
       <div className='text-center'>
-        <h2 className='subtitle'>with a sprinkle of Back-End</h2>
+        <h2 className={`${isColorized ? "color-subtitle" : "subtitle"}`}>
+          with a sprinkle of Back-End
+        </h2>
       </div>
     </div>
   );

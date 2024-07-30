@@ -15,28 +15,49 @@
   .width-custom {
     @apply w-11/12 md:w-4/6 transition-all duration-1000 px-4;
   }
+  .text-drop {
+    @apply drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)];
+  }
 }
 @layer components {
+  .gradient-text {
+    @apply bg-gradient-to-r from-amber-100 from-10% to-amber-300 text-transparent bg-clip-text;
+  }
+  .color-gradient-text {
+    @apply tracking-normal text-transparent bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text;
+  }
   .header-main {
-    @apply bg-gradient-to-r from-amber-100 from-10% to-amber-300 text-transparent bg-clip-text my-4;
+    @apply gradient-text my-4;
+  }
+  .color-header-main {
+    @apply tracking-normal text-transparent bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-drop my-4;
   }
   .header-link {
     @apply font-extrabold bg-gradient-to-r from-amber-100 from-50% to-cyan-500 text-transparent bg-clip-text my-4;
   }
   .title {
-    @apply bg-gradient-to-r from-amber-100 from-10% to-amber-300 text-transparent bg-clip-text my-4 pb-2 text-2xl md:text-6xl font-bold transition-all duration-500;
+    @apply gradient-text my-4 pb-2 text-2xl md:text-6xl font-bold transition-all duration-500 text-drop;
   }
   .color-title {
-    @apply tracking-normal text-transparent bg-gradient-to-r from-orange-800  to-orange-700 bg-clip-text my-4 pb-2 text-6xl font-bold;
+    @apply tracking-normal text-transparent bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text my-4 pb-2 text-6xl font-bold text-drop;
   }
   .subtitle {
-    @apply font-extrabold bg-gradient-to-r from-amber-100 from-40% to-cyan-500 text-transparent bg-clip-text my-4 text-sm md:text-xl transition-all duration-500;
+    @apply font-extrabold bg-gradient-to-r from-amber-100 from-40% to-cyan-500 text-transparent bg-clip-text my-4 text-sm md:text-xl transition-all duration-500 text-drop;
+  }
+  .color-subtitle {
+    @apply font-extrabold tracking-normal text-transparent bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text my-4 text-sm md:text-xl transition-all duration-500 text-drop;
   }
   .skill-name {
     @apply text-sm text-center bg-gradient-to-r from-amber-100 from-40% to-cyan-500 text-transparent bg-clip-text my-4;
   }
+  .color-skill-title {
+    @apply text-red-400 font-bold;
+  }
   .github-link {
     @apply bg-gradient-to-r from-cyan-500 to-amber-200 scale-125;
+  }
+  .footer-container {
+    @apply container width-custom mx-auto px-4 flex flex-col items-center justify-center gap-8 sm:grid sm:grid-cols-2 sm:place-items-center md:gap-10 lg:flex lg:flex-row lg:justify-center lg:gap-24 lg:items-center transition-all duration-500;
   }
 }
 

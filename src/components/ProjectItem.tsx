@@ -1,4 +1,5 @@
 import React from "react";
+import { useColor } from "../context/ColorContext";
 
 interface ProjectItemProps {
   imageUrl: string;
@@ -15,10 +16,15 @@ const ProjectItem: React.FC<ProjectItemProps> = ({
   visitLink,
   githubLink,
 }) => {
+  const { isColorized } = useColor();
   return (
     <div className='flex flex-col xl:flex-row w-full max-w-4xl mb-6 mx-auto '>
       {/* Main Project Showcase */}
-      <div className='flex-[7] p-4 rounded-lg shadow-lg h-96 w-full xl:w-auto'>
+      <div
+        className={`flex-[7] p-4 rounded-lg shadow-lg h-96 w-full xl:w-auto ${
+          isColorized ? "bg-pink-400" : ""
+        }`}
+      >
         <img
           src={imageUrl}
           alt={title}
