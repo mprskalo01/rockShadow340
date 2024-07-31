@@ -18,11 +18,11 @@ const ProjectItem: React.FC<ProjectItemProps> = ({
 }) => {
   const { isColorized } = useColor();
   return (
-    <div className='flex flex-col xl:flex-row w-full max-w-4xl mb-6 mx-auto '>
+    <div className='flex flex-col xl:flex-row w-full lg:max-w-4xl mx-auto '>
       {/* Main Project Showcase */}
       <div
-        className={`flex-[7] p-4 rounded-lg shadow-lg h-96 w-full xl:w-auto ${
-          isColorized ? "bg-pink-400" : ""
+        className={`xl:flex-[7] xl:h-96 h-96 p-4 rounded-lg shadow-lg w-full xl:w-auto  ${
+          isColorized ? "bg-cyan-100" : ""
         }`}
       >
         <img
@@ -33,13 +33,23 @@ const ProjectItem: React.FC<ProjectItemProps> = ({
       </div>
 
       {/* Project Title and Buttons */}
-      <div className='flex-[3] xl:ml-6 mt-6 xl:mt-0 flex flex-col justify-center'>
-        <h1 className='title'>{title}</h1>
-        <h2 className='subtitle'>{description}</h2>
+      <div className='flex-[3] ml-4 mt-6 xl:mt-0 flex flex-col justify-center'>
+        <h1
+          className={`${
+            isColorized ? "color-visit-link-title" : "visit-link-title"
+          }`}
+        >
+          {title}
+        </h1>
+        <h2 className={`${isColorized ? "color-subtitle" : "subtitle"}`}>
+          {description}
+        </h2>
         <div className='flex space-x-4 mt-4'>
           <a
             href={visitLink}
-            className='border-gradient w-48 text-center bg-gradient-to-r from-zinc-900 via-zinc-800 to-zinc-700 text-amber-200 font-extrabold font-lato px-4 py-2 rounded-lg transition-transform duration-500 hover:scale-110'
+            className={`w-48 text-center rounded-full text-black font-extrabold font-lato px-4 pt-2.5 transition-transform duration-500 hover:scale-110 ${
+              isColorized ? "color-visit-link" : "visit-link"
+            } `}
             target='_blank'
             rel='noopener noreferrer'
           >
@@ -49,7 +59,9 @@ const ProjectItem: React.FC<ProjectItemProps> = ({
             href={githubLink}
             target='_blank'
             rel='noopener noreferrer'
-            className='bg-amber-100 flex items-center justify-center p-2 rounded-full hover:github-link transition-all duration-500 ease-in-out'
+            className={` p-2 rounded-full hover:scale-125 transition-all duration-500  ${
+              isColorized ? "bg-lime-300" : "bg-amber-100"
+            }`}
             aria-label='Visit GitHub'
           >
             <svg

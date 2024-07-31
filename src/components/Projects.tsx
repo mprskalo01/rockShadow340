@@ -6,8 +6,8 @@ const Projects: React.FC = () => {
     {
       imageUrl:
         "https://bootstrapmade.com/content/templatefiles/Arsha/Arsha-bootstrap-website-template-md.webp",
-      title: "#1",
-      description: "Description for #1.",
+      title: "Car Rental",
+      description: "MERN Fullstack Web App",
       visitLink: "https://github.com/mprskalo01",
       githubLink: "https://github.com/mprskalo01",
     },
@@ -30,7 +30,7 @@ const Projects: React.FC = () => {
   ];
 
   return (
-    <div className='flex flex-col items-center justify-center mx-auto mt-40 gap-44 width-custom'>
+    <div className='flex flex-col items-center justify-center mx-auto mt-40 gap-24 xl:gap-36 width-custom'>
       {projects.map((project, index) => (
         <ProjectItem
           key={index}

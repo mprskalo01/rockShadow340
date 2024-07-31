@@ -8,8 +8,8 @@ const Header: React.FC = () => {
   const { isColorized } = useColor();
   return (
     <header
-      className={`top-0 sticky z-50 transition-all duration-500 ${
-        isColorized ? "bg-lime-300" : "bg-zinc-800"
+      className={`top-0 sticky z-50 transition-all duration-500 md:rounded-bl-full md:rounded-br-full ${
+        isColorized ? "bg-orange-300" : "bg-zinc-800"
       }`}
     >
       <div

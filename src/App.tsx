@@ -14,8 +14,10 @@ const AppContent: React.FC = () => {
 
   return (
     <div
-      className={`min-h-screen transition-all duration-500 ${
-        isColorized ? "bg-lime-300" : "bg-zinc-800"
+      className={`min-h-screen transition-colors duration-500 ${
+        isColorized
+          ? "bg-gradient-to-b from-amber-50 to bg-amber-200"
+          : "bg-zinc-800"
       }`}
     >
       <Header />

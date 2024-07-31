@@ -42,19 +42,31 @@
     @apply tracking-normal text-transparent bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text my-4 pb-2 text-6xl font-bold text-drop;
   }
   .subtitle {
-    @apply font-extrabold bg-gradient-to-r from-amber-100 from-40% to-cyan-500 text-transparent bg-clip-text my-4 text-sm md:text-xl transition-all duration-500 text-drop;
+    @apply bg-gradient-to-r from-amber-100 from-40% to-cyan-500 text-transparent bg-clip-text my-4 text-sm md:text-xl transition-all duration-500 text-drop;
   }
   .color-subtitle {
-    @apply font-extrabold tracking-normal text-transparent bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text my-4 text-sm md:text-xl transition-all duration-500 text-drop;
-  }
-  .skill-name {
-    @apply text-sm text-center bg-gradient-to-r from-amber-100 from-40% to-cyan-500 text-transparent bg-clip-text my-4;
+    @apply tracking-normal text-transparent bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text my-4 text-sm md:text-xl transition-all duration-500 text-drop;
   }
   .color-skill-title {
-    @apply text-red-400 font-bold;
+    @apply text-zinc-100;
   }
-  .github-link {
-    @apply bg-gradient-to-r from-cyan-500 to-amber-200 scale-125;
+  .skill-name {
+    @apply text-sm font-bold text-center bg-gradient-to-r from-amber-100 from-40% to-cyan-500 text-transparent bg-clip-text my-4;
+  }
+  .color-skill-name {
+    @apply text-sm font-bold text-center text-white my-4;
+  }
+  .visit-link-title {
+    @apply gradient-text my-4 pb-2 text-2xl md:text-4xl font-bold transition-all duration-500 text-drop;
+  }
+  .color-visit-link-title {
+    @apply color-gradient-text my-4 pb-2 text-2xl md:text-4xl font-bold transition-all duration-500 text-drop;
+  }
+  .visit-link {
+    @apply bg-gradient-to-l from-amber-50 to-amber-200;
+  }
+  .color-visit-link {
+    @apply bg-gradient-to-r from-cyan-400 to-lime-300;
   }
   .footer-container {
     @apply container width-custom mx-auto px-4 flex flex-col items-center justify-center gap-8 sm:grid sm:grid-cols-2 sm:place-items-center md:gap-10 lg:flex lg:flex-row lg:justify-center lg:gap-24 lg:items-center transition-all duration-500;

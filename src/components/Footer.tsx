@@ -35,11 +35,11 @@ const Footer: React.FC = () => {
         </div>
       </div>
       <h3
-        className={`text-center pt-24 xl:pt-44 pb-4 font-bold text-lg md:text-2xl ${
+        className={`text-center pt-24 xl:pt-44 pb-4 font-bold text-sm md:text-lg transition-all duration-500 ${
           isColorized ? "color-gradient-text" : "gradient-text"
         } `}
       >
-        Designed and Developed by Mario ©
+        Designed and Developed by © Mario
       </h3>
     </footer>
   );
