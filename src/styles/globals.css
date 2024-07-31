@@ -13,7 +13,7 @@
     @apply font-lato;
   }
   .width-custom {
-    @apply w-11/12 md:w-4/6 transition-all duration-1000 px-4;
+    @apply w-11/12 px-4 transition-all duration-1000 md:w-4/6;
   }
   .text-drop {
     @apply drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)];
@@ -21,46 +21,46 @@
 }
 @layer components {
   .gradient-text {
-    @apply bg-gradient-to-r from-amber-100 from-10% to-amber-300 text-transparent bg-clip-text;
+    @apply bg-gradient-to-r from-amber-100 from-10% to-amber-300 bg-clip-text text-transparent;
   }
   .color-gradient-text {
-    @apply tracking-normal text-transparent bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text;
+    @apply bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text tracking-normal text-transparent;
   }
   .header-main {
     @apply gradient-text my-4;
   }
   .color-header-main {
-    @apply tracking-normal text-transparent bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-drop my-4;
+    @apply text-drop my-4 bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text tracking-normal text-transparent;
   }
   .header-link {
-    @apply font-extrabold bg-gradient-to-r from-amber-100 from-50% to-cyan-500 text-transparent bg-clip-text my-4;
+    @apply my-4 bg-gradient-to-r from-amber-100 from-50% to-cyan-500 bg-clip-text font-extrabold text-transparent;
   }
   .title {
-    @apply gradient-text my-4 pb-2 text-2xl md:text-6xl font-bold transition-all duration-500 text-drop;
+    @apply gradient-text text-drop my-4 pb-2 text-2xl font-bold transition-all duration-500 md:text-6xl;
   }
   .color-title {
-    @apply tracking-normal text-transparent bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text my-4 pb-2 text-6xl font-bold text-drop;
+    @apply text-drop my-4 bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text pb-2 text-6xl font-bold tracking-normal text-transparent;
   }
   .subtitle {
-    @apply bg-gradient-to-r from-amber-100 from-40% to-cyan-500 text-transparent bg-clip-text my-4 text-sm md:text-xl transition-all duration-500 text-drop;
+    @apply text-drop my-4 bg-gradient-to-r from-amber-100 from-40% to-cyan-500 bg-clip-text text-sm text-transparent transition-all duration-500 md:text-xl;
   }
   .color-subtitle {
-    @apply tracking-normal text-transparent bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text my-4 text-sm md:text-xl transition-all duration-500 text-drop;
+    @apply text-drop my-4 bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-sm tracking-normal text-transparent transition-all duration-500 md:text-xl;
   }
   .color-skill-title {
     @apply text-zinc-100;
   }
   .skill-name {
-    @apply text-sm font-bold text-center bg-gradient-to-r from-amber-100 from-40% to-cyan-500 text-transparent bg-clip-text my-4;
+    @apply my-4 bg-gradient-to-r from-amber-100 from-40% to-cyan-500 bg-clip-text text-center text-sm font-bold text-transparent;
   }
   .color-skill-name {
-    @apply text-sm font-bold text-center text-white my-4;
+    @apply my-4 text-center text-sm font-bold text-white;
   }
   .visit-link-title {
-    @apply gradient-text my-4 pb-2 text-2xl md:text-4xl font-bold transition-all duration-500 text-drop;
+    @apply gradient-text text-drop my-4 pb-2 text-2xl font-bold transition-all duration-500 md:text-4xl;
   }
   .color-visit-link-title {
-    @apply color-gradient-text my-4 pb-2 text-2xl md:text-4xl font-bold transition-all duration-500 text-drop;
+    @apply color-gradient-text text-drop my-4 pb-2 text-2xl font-bold transition-all duration-500 md:text-4xl;
   }
   .visit-link {
     @apply bg-gradient-to-l from-amber-50 to-amber-200;
@@ -69,7 +69,7 @@
     @apply bg-gradient-to-r from-cyan-400 to-lime-300;
   }
   .footer-container {
-    @apply container width-custom mx-auto px-4 flex flex-col items-center justify-center gap-8 sm:grid sm:grid-cols-2 sm:place-items-center md:gap-10 lg:flex lg:flex-row lg:justify-center lg:gap-24 lg:items-center transition-all duration-500;
+    @apply width-custom container mx-auto flex flex-col items-center justify-center gap-8 px-4 transition-all duration-500 sm:grid sm:grid-cols-2 sm:place-items-center md:gap-10 lg:flex lg:flex-row lg:items-center lg:justify-center lg:gap-24;
   }
 }
 

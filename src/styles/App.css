@@ -41,7 +41,7 @@
   position: relative;
 }
 .border-gradient::after {
-  content: "";
+  content: '';
   position: absolute;
   bottom: 0;
   left: 0;
@@ -60,7 +60,7 @@
   position: relative;
 }
 .color-border-gradient::after {
-  content: "";
+  content: '';
   position: absolute;
   bottom: 0;
   left: 0;
