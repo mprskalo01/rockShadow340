@@ -12,7 +12,7 @@ const Hero: React.FC = () => {
       </div>
       <div className="text-center">
         <h2 className={`${isColorized ? 'color-subtitle' : 'subtitle'}`}>
-          with a sprinkle of Back-End
+          with Back-End integration
         </h2>
       </div>
     </div>
