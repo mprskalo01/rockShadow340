@@ -1,5 +1,5 @@
 import React from 'react'
-import { useColor } from '../context/ColorContext'
+import { useColor } from '../../context/ColorContext'
 
 const LinkedinIcon = () => {
   const { isColorized } = useColor()

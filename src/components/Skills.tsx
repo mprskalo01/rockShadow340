@@ -1,6 +1,6 @@
 import React from 'react'
 import SkillCategory from './SkillCategory'
-import Icons from '../assets/Icons'
+import Icons from '../assets/icons/Icons'
 
 const Skills: React.FC = () => {
   return (

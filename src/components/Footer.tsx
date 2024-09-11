@@ -1,5 +1,5 @@
 import React from 'react'
-import SocialIcons from '../assets/SocialIcons'
+import SocialIcons from '../assets/icons/SocialIcons'
 import { useColor } from '../context/ColorContext'
 
 const Footer: React.FC = () => {

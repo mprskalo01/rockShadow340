@@ -27,7 +27,7 @@ const ProjectItem: React.FC<ProjectItemProps> = ({
       >
         <img
           src={imageUrl}
-          alt={title}
+          alt={`Showcase of the ${title} project`}
           className="h-full w-full rounded-lg duration-500 hover:-translate-y-10 hover:scale-105"
         />
       </div>
