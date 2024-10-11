@@ -42,7 +42,7 @@ const SkillCategory: React.FC<SkillCategoryProps> = ({ title, skills }) => {
         {skills.map((skill, index) => (
           <div
             key={index}
-            className={`group flex flex-col items-center justify-between rounded-xl p-4 shadow-2xl transition-all duration-500 hover:scale-110 ${
+            className={`group flex flex-col items-center justify-between rounded-xl p-4 shadow-lg transition-all duration-500 hover:scale-110 ${
               isColorized ? 'bg-gradient-to-t from-pink-200 to-pink-600' : ''
             } ${title === 'Optimization' && index === 2 ? 'col-span-2' : ''}`}
           >

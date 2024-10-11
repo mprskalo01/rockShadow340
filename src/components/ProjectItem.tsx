@@ -22,7 +22,7 @@ const ProjectItem: React.FC<ProjectItemProps> = ({
       {/* Main Project Showcase */}
       <div
         className={`h-96 w-full rounded-lg p-4 shadow-lg xl:h-96 xl:w-auto xl:flex-[7] ${
-          isColorized ? 'bg-cyan-100' : ''
+          isColorized ? 'bg-zinc-800' : 'bg-zinc-800'
         }`}
       >
         <img
@@ -34,27 +34,14 @@ const ProjectItem: React.FC<ProjectItemProps> = ({
 
       {/* Project Title and Buttons */}
       <div className="ml-4 mt-6 flex flex-[3] flex-col justify-center xl:mt-0">
-        <h1
-          className={`${
-            isColorized ? 'color-visit-link-title' : 'visit-link-title'
-          }`}
-        >
-          {title}
-        </h1>
-        <h2 className={`${isColorized ? 'color-subtitle' : 'subtitle'}`}>
-          {description}
-        </h2>
-        <div className="mt-4 flex space-x-4">
-          <a
-            href={visitLink}
-            className={`w-48 rounded-full px-4 pt-2.5 text-center font-lato font-extrabold text-black transition-transform duration-500 hover:scale-110 ${
-              isColorized ? 'color-visit-link' : 'visit-link'
-            } `}
-            target="_blank"
-            rel="noopener noreferrer"
+        <div className="flex items-center gap-4 space-x-2">
+          <h1
+            className={`${
+              isColorized ? 'color-visit-link-title' : 'visit-link-title'
+            }`}
           >
-            Visit
-          </a>
+            {title}
+          </h1>
           <a
             href={githubLink}
             target="_blank"
@@ -80,6 +67,9 @@ const ProjectItem: React.FC<ProjectItemProps> = ({
             </svg>
           </a>
         </div>
+        <h2 className={`${isColorized ? 'color-subtitle' : 'subtitle'}`}>
+          {description}
+        </h2>
       </div>
     </div>
   )
