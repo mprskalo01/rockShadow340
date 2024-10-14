@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/rockshadow340/static/css/main.faf2c1e6.css",
+    "main.js": "/rockshadow340/static/js/main.dbc477f2.js",
+    "static/js/453.1407b060.chunk.js": "/rockshadow340/static/js/453.1407b060.chunk.js",
+    "static/media/carProject.png": "/rockshadow340/static/media/carProject.ba933035a61c39de8a7a.png",
+    "static/media/fainanceProject.png": "/rockshadow340/static/media/fainanceProject.2606c4426b89b95c83c4.png",
+    "index.html": "/rockshadow340/index.html",
+    "main.faf2c1e6.css.map": "/rockshadow340/static/css/main.faf2c1e6.css.map",
+    "main.dbc477f2.js.map": "/rockshadow340/static/js/main.dbc477f2.js.map",
+    "453.1407b060.chunk.js.map": "/rockshadow340/static/js/453.1407b060.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.faf2c1e6.css",
+    "static/js/main.dbc477f2.js"
+  ]
+}
