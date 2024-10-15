@@ -26,6 +26,7 @@ const Header: React.FC = () => {
             Mario
           </h1>
         </div>
+
         <ColorizeButton />
       </div>
     </header>
