@@ -16,7 +16,7 @@ const Hero: React.FC = () => {
         </h2>
       </div>
       <div className="mt-12 flex flex-col gap-4 text-center">
-        <a href="/src/assets/MarioPrskaloResume.pdf" download>
+        <a href="/MarioPrskaloResume.pdf" download>
           <button
             className={`rounded-lg px-4 py-2 font-extrabold transition-all duration-500 hover:scale-105 ${
               isColorized
