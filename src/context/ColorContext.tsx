@@ -1,5 +1,4 @@
-// ColorContext.tsx
-import React, { createContext, useState, useContext } from 'react'
+import React, { createContext, useState, useContext, useEffect } from 'react'
 
 type ColorContextType = {
   isColorized: boolean
@@ -11,7 +10,14 @@ const ColorContext = createContext<ColorContextType | undefined>(undefined)
 export const ColorProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
-  const [isColorized, setIsColorized] = useState(false)
+  const [isColorized, setIsColorized] = useState<boolean>(() => {
+    const savedMode = localStorage.getItem('isColorized')
+    return savedMode ? JSON.parse(savedMode) : false
+  })
+
+  useEffect(() => {
+    localStorage.setItem('isColorized', JSON.stringify(isColorized))
+  }, [isColorized])
 
   return (
     <ColorContext.Provider

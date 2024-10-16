@@ -75,7 +75,7 @@
     @apply bg-gradient-to-r from-cyan-400 to-lime-300;
   }
   .footer-container {
-    @apply width-custom container mx-auto flex flex-col items-center justify-center gap-8 px-4 sm:grid sm:grid-cols-2 sm:place-items-center md:gap-10 lg:flex lg:flex-row lg:items-center lg:justify-center lg:gap-24;
+    @apply width-custom container mx-auto flex flex-row items-center justify-center gap-20 px-4;
   }
 }
 
