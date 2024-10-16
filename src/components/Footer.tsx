@@ -22,6 +22,7 @@ const Footer: React.FC = () => {
           <a
             href="mailto:mario.prskalo5@gmail.com?subject=Reaching%20Out%20from%20Your%20Portfolio"
             target="_blank"
+            className="transition-all duration-500 hover:scale-125"
             rel="noopener noreferrer"
           >
             <SocialIcons.MailIcon />
@@ -42,7 +43,7 @@ const Footer: React.FC = () => {
         </h4>
       </div>
       <h3
-        className={`mt-12 text-center text-sm font-bold transition-all duration-500 md:text-lg xl:mt-16 ${
+        className={`md:text-md mt-8 pb-12 text-center text-xs font-bold transition-all duration-500 xl:mt-16 ${
           isColorized ? 'color-gradient-text' : 'gradient-text'
         } `}
       >

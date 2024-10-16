@@ -1,23 +1,21 @@
 import React from 'react'
 import ProjectItem from './ProjectItem'
-import carProjectImage from '../assets/images/carProject.png'
-import fainanceProjectImage from '../assets/images/fainanceProject.png'
 import { useColor } from '../context/ColorContext'
-// todo change the images to color mode if colorozied on
+
 const Projects: React.FC = () => {
   const { isColorized } = useColor()
   const projects = [
     {
-      imageUrl: fainanceProjectImage,
+      imageUrl: '/images/fainanceProject.png',
       title: 'FAInance',
-      description: 'React | Node | Express | Tensorflow | MongoDB |',
+      description: 'React | Node | Express | Tensorflow | MongoDB ',
       visitLink: 'https://github.com/mprskalo01',
       githubLink: 'https://github.com/mprskalo01/financeMERN',
     },
     {
-      imageUrl: carProjectImage,
+      imageUrl: '/images/carProject.png',
       title: 'Car Rental',
-      description: 'React | Node | Express | MongoDB |',
+      description: 'React | Node | Express | MongoDB ',
       visitLink: 'https://github.com/mprskalo01',
       githubLink: 'https://github.com/mprskalo01/PZI_2024',
     },

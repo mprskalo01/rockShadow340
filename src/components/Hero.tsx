@@ -4,7 +4,7 @@ import { useColor } from '../context/ColorContext'
 const Hero: React.FC = () => {
   const { isColorized } = useColor()
   return (
-    <div className="mx-6 mb-16 mt-4 flex h-[80vh] flex-col items-center justify-center">
+    <div className="mx-6 mb-10 flex h-[80vh] flex-col items-center justify-center md:mb-16">
       <div className="text-center">
         <h1 className={`${isColorized ? 'color-title' : 'title'}`}>
           Developing the Frontend
@@ -18,13 +18,11 @@ const Hero: React.FC = () => {
       <div className="mt-12 flex flex-col gap-4 text-center">
         <a href="/MarioPrskaloResume.pdf" download>
           <button
-            className={`rounded-lg px-4 py-2 font-extrabold transition-all duration-500 hover:scale-105 ${
-              isColorized
-                ? 'bg-zinc-800 text-white'
-                : 'bg-zinc-200 text-zinc-800'
+            className={`w-32 rounded-lg py-2 font-extrabold shadow-lg transition-all duration-500 hover:scale-105 ${
+              isColorized ? 'bg-white text-black' : 'bg-zinc-700 text-white'
             }`}
           >
-            Download CV
+            View CV
           </button>
         </a>
         <a
@@ -33,10 +31,8 @@ const Hero: React.FC = () => {
           rel="noopener noreferrer"
         >
           <button
-            className={`rounded-lg px-4 py-2 font-extrabold transition-all duration-500 hover:scale-105 ${
-              isColorized
-                ? 'bg-zinc-700 text-white'
-                : 'bg-zinc-100 text-zinc-800'
+            className={`w-32 rounded-lg py-2 font-extrabold shadow-lg transition-all duration-500 hover:scale-105 ${
+              isColorized ? 'bg-white text-black' : 'bg-zinc-700 text-white'
             }`}
           >
             Contact me

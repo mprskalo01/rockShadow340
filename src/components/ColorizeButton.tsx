@@ -26,7 +26,7 @@ const ColorizeButton: React.FC = () => {
     <button
       onClick={handleClick}
       disabled={isDisabled}
-      className={`rounded-lg px-4 py-2 font-extrabold transition-all duration-500 hover:scale-90 ${
+      className={`rounded-lg px-4 py-2 font-extrabold hover:scale-90 ${
         isColorized ? 'bg-zinc-800 text-white' : 'animate-rainbow-text'
       }`}
     >
