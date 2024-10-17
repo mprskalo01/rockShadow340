@@ -5,7 +5,6 @@ interface ProjectItemProps {
   imageUrl: string
   title: string
   description: string
-  visitLink: string
   githubLink: string
 }
 
@@ -13,7 +12,6 @@ const ProjectItem: React.FC<ProjectItemProps> = ({
   imageUrl,
   title,
   description,
-  visitLink,
   githubLink,
 }) => {
   const { isColorized } = useColor()
@@ -27,6 +25,7 @@ const ProjectItem: React.FC<ProjectItemProps> = ({
       >
         <img
           src={imageUrl}
+          loading="lazy"
           alt={`Showcase of the ${title} project`}
           className="h-full w-full rounded-lg duration-500 hover:-translate-y-10 hover:scale-105"
         />

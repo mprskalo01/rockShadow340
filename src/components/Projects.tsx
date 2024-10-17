@@ -6,17 +6,15 @@ const Projects: React.FC = () => {
   const { isColorized } = useColor()
   const projects = [
     {
-      imageUrl: '/images/fainanceProject.png',
+      imageUrl: '/images/fainanceProject.webp',
       title: 'FAInance',
       description: 'React | Node | Express | Tensorflow | MongoDB ',
-      visitLink: 'https://github.com/mprskalo01',
       githubLink: 'https://github.com/mprskalo01/financeMERN',
     },
     {
-      imageUrl: '/images/carProject.png',
+      imageUrl: '/images/carProject.webp',
       title: 'Car Rental',
       description: 'React | Node | Express | MongoDB ',
-      visitLink: 'https://github.com/mprskalo01',
       githubLink: 'https://github.com/mprskalo01/PZI_2024',
     },
   ]
@@ -39,7 +37,6 @@ const Projects: React.FC = () => {
             imageUrl={project.imageUrl}
             title={project.title}
             description={project.description}
-            visitLink={project.visitLink}
             githubLink={project.githubLink}
           />
         ))}
