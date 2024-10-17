@@ -23,7 +23,9 @@ const Hero: React.FC = () => {
         <a href="/MarioPrskaloResume.pdf" download>
           <button
             className={`w-32 rounded-lg py-2 font-extrabold shadow-lg transition-all duration-500 hover:scale-105 ${
-              isColorized ? 'bg-white text-black' : 'bg-zinc-700 text-white'
+              isColorized
+                ? 'border border-zinc-400 bg-white text-black'
+                : 'border border-zinc-400 bg-zinc-700 text-white'
             }`}
           >
             View CV
@@ -36,7 +38,9 @@ const Hero: React.FC = () => {
         >
           <button
             className={`w-32 rounded-lg py-2 font-extrabold shadow-lg transition-all duration-500 hover:scale-105 ${
-              isColorized ? 'bg-white text-black' : 'bg-zinc-700 text-white'
+              isColorized
+                ? 'border border-zinc-400 bg-white text-black'
+                : 'border border-zinc-400 bg-zinc-700 text-white'
             }`}
           >
             Contact me

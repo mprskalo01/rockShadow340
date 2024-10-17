@@ -18,11 +18,13 @@ const Header: React.FC = () => {
         }`}
       >
         <div className="text-4xl font-bold">
-          <h2
+          <button
             className={`${isColorized ? 'color-header-main' : 'header-main'}`}
+            onClick={() => window.location.reload()}
+            style={{ cursor: 'pointer' }}
           >
             Mario
-          </h2>
+          </button>
         </div>
 
         <ColorizeButton />
