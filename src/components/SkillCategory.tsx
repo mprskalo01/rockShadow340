@@ -27,13 +27,13 @@ const SkillCategory: React.FC<SkillCategoryProps> = ({ title, skills }) => {
           : 'bg-zinc-800'
       } flex h-full flex-col`}
     >
-      <h1
+      <h2
         className={`title mb-4 text-center text-xl font-semibold ${
           isColorized ? 'color-skill-title' : 'title'
         }`}
       >
         {title}
-      </h1>
+      </h2>
       <div
         className={`rounded-xl pb-4 ${gridClasses} flex-grow ${
           isColorized ? 'color-border-gradient' : 'border-gradient'

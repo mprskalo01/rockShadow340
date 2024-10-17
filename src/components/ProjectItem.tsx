@@ -34,13 +34,13 @@ const ProjectItem: React.FC<ProjectItemProps> = ({
       {/* Project Title and Buttons */}
       <div className="ml-4 mt-6 flex flex-[3] flex-col justify-center xl:mt-0">
         <div className="flex items-center gap-4 space-x-2">
-          <h1
+          <h2
             className={`${
               isColorized ? 'color-visit-link-title' : 'visit-link-title'
             }`}
           >
             {title}
-          </h1>
+          </h2>
           <a
             href={githubLink}
             target="_blank"

@@ -7,9 +7,9 @@ const Skills: React.FC = () => {
   const { isColorized } = useColor()
   return (
     <div className="width-custom container mx-auto px-6 text-center">
-      <h1 className={`${isColorized ? 'color-title' : 'title'}`}>
+      <h2 className={`${isColorized ? 'color-title' : 'title'}`}>
         &lt;Skills /&gt;
-      </h1>
+      </h2>
       <div className="grid grid-cols-1 gap-8 xl:grid-cols-3">
         <SkillCategory
           title="Front-End"

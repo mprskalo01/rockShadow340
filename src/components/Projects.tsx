@@ -22,9 +22,9 @@ const Projects: React.FC = () => {
   return (
     <div className="width-custom mx-auto mt-40 text-center">
       <div className="mb-12">
-        <h1 className={`${isColorized ? 'color-title' : 'title'}`}>
+        <h2 className={`${isColorized ? 'color-title' : 'title'}`}>
           &lt;Projects /&gt;
-        </h1>
+        </h2>
         <h2 className="text-sm text-gray-500">
           Detailed project breakdown in the GitHub readme
         </h2>

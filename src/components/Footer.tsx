@@ -7,9 +7,9 @@ const Footer: React.FC = () => {
   return (
     <footer className="py-0 text-center">
       <div className="mt-24 flex min-h-fit flex-col items-center">
-        <h1 className={`md:mb-10 ${isColorized ? 'color-title' : 'title'}`}>
+        <h2 className={`md:mb-10 ${isColorized ? 'color-title' : 'title'}`}>
           &lt;Contact /&gt;
-        </h1>
+        </h2>
         <div className="footer-container">
           <a
             href="https://www.linkedin.com/in/mprskalo01/"

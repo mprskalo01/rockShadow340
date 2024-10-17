@@ -18,13 +18,13 @@ const Header: React.FC = () => {
         }`}
       >
         <div className="text-4xl font-bold">
-          <h1
+          <h2
             className={`cursor-pointer transition-all duration-500 hover:scale-90 ${
               isColorized ? 'color-header-main' : 'header-main'
             }`}
           >
             Mario
-          </h1>
+          </h2>
         </div>
 
         <ColorizeButton />
