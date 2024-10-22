@@ -11,6 +11,7 @@
     "@types/node": "^16.18.104",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
+    "@types/webpack-bundle-analyzer": "^4.7.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.25.1",
@@ -19,12 +20,13 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "predeploy": "npm run build",
+    "predeploy": "craco build",
     "deploy": "gh-pages -d build",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "craco start",
+    "build": "craco build",
+    "analyze": "cross-env ANALYZE=true craco build",
+    "test": "craco test",
+    "eject": "craco eject"
   },
   "eslintConfig": {
     "extends": [
@@ -46,9 +48,13 @@
   },
   "devDependencies": {
     "@babel/plugin-transform-private-property-in-object": "^7.24.7",
+    "@craco/craco": "^7.1.0",
+    "@craco/types": "^7.1.0",
+    "cross-env": "^7.0.3",
     "gh-pages": "^6.2.0",
     "prettier": "^3.3.3",
     "prettier-plugin-tailwindcss": "^0.6.5",
-    "tailwindcss": "^3.4.7"
+    "tailwindcss": "^3.4.7",
+    "webpack-bundle-analyzer": "^4.10.2"
   }
 }

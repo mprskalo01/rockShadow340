@@ -1,13 +1,14 @@
 import './styles/App.css'
 import './styles/globals.css'
-import React, { useEffect } from 'react'
-import Header from './components/Header'
-import Hero from './components/Hero'
-import Skills from './components/Skills'
-import Projects from './components/Projects'
+import React, { useEffect, Suspense } from 'react'
 import { ColorProvider, useColor } from './context/ColorContext'
-import Footer from './components/Footer'
-import ScrollToTop from './components/ScrollToTop'
+
+const Header = React.lazy(() => import('./components/Header'))
+const Hero = React.lazy(() => import('./components/Hero'))
+const Skills = React.lazy(() => import('./components/Skills'))
+const Projects = React.lazy(() => import('./components/Projects'))
+const Footer = React.lazy(() => import('./components/Footer'))
+const ScrollToTop = React.lazy(() => import('./components/ScrollToTop'))
 
 const AppContent: React.FC = () => {
   const { isColorized } = useColor()
@@ -29,12 +30,14 @@ const AppContent: React.FC = () => {
           : 'bg-zinc-800'
       }`}
     >
-      <Header />
-      <Hero />
-      <Skills />
-      <Projects />
-      <Footer />
-      <ScrollToTop />
+      <Suspense fallback={<div>Loading...</div>}>
+        <Header />
+        <Hero />
+        <Skills />
+        <Projects />
+        <Footer />
+        <ScrollToTop />
+      </Suspense>
     </div>
   )
 }
