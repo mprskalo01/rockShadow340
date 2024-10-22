@@ -20,17 +20,19 @@ const Projects: React.FC = () => {
   ]
 
   return (
-    <div className="width-custom mx-auto mt-40 text-center">
+    <div className="width-custom mx-auto mt-40">
       <div className="mb-12">
-        <h2 className={`${isColorized ? 'color-title' : 'title'}`}>
+        <h2 className={`text-center ${isColorized ? 'color-title' : 'title'}`}>
           &lt;Projects /&gt;
         </h2>
-        <h2 className="text-sm text-gray-500">
+        <h2
+          className={`text-center text-sm ${isColorized ? 'text-black' : 'text-white'}`}
+        >
           Detailed project breakdown in the GitHub readme
         </h2>
       </div>
 
-      <div className="flex flex-col items-center justify-center gap-16 xl:gap-24">
+      <div className="flex flex-col gap-16 xl:gap-24">
         {projects.map((project, index) => (
           <ProjectItem
             key={index}

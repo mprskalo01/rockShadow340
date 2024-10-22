@@ -19,7 +19,7 @@ const ProjectItem: React.FC<ProjectItemProps> = ({
     <div className="mx-auto flex w-full flex-col lg:max-w-4xl xl:flex-row">
       {/* Main Project Showcase */}
       <div
-        className={`h-96 w-full rounded-lg p-4 shadow-lg xl:h-96 xl:w-auto xl:flex-[7] ${
+        className={`w-full rounded-lg p-4 shadow-lg xl:h-96 xl:w-auto xl:flex-[7] ${
           isColorized ? 'bg-zinc-800' : 'bg-zinc-800'
         }`}
       >
@@ -27,7 +27,7 @@ const ProjectItem: React.FC<ProjectItemProps> = ({
           src={imageUrl}
           loading="lazy"
           alt={`Showcase of the ${title} project`}
-          className="h-full w-full rounded-lg duration-500 hover:-translate-y-10 hover:scale-105"
+          className="aspect-auto rounded-lg duration-500 hover:-translate-y-10 hover:scale-105"
         />
       </div>
 

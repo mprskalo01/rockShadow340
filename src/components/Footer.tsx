@@ -36,19 +36,19 @@ const Footer: React.FC = () => {
             <SocialIcons.GithubIcon />
           </a>
         </div>
-        <h4
+        <p
           className={`mt-2 text-sm font-semibold ${isColorized ? 'color-gradient-text' : 'gradient-text'}`}
         >
           mario.prskalo5@gmail.com
-        </h4>
+        </p>
       </div>
-      <h3
+      <p
         className={`md:text-md mt-8 pb-12 text-center text-xs font-bold transition-all duration-500 xl:mt-16 ${
           isColorized ? 'color-gradient-text' : 'gradient-text'
         } `}
       >
         Designed and Developed by © Mario Prskalo
-      </h3>
+      </p>
     </footer>
   )
 }

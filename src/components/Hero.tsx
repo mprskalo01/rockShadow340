@@ -6,10 +6,10 @@ const Hero: React.FC = () => {
   return (
     <div className="mx-6 mb-10 flex h-[80vh] flex-col items-center justify-center md:mb-16">
       <div className="text-center">
-        <h1 className="sronly">
+        {/* <h1 className="sronly">
           Mario Prskalo | Experienced Web Developer Specializing in Frontend
           Development and Modern Web Technologies
-        </h1>
+        </h1> */}
         <h2 className={`${isColorized ? 'color-title' : 'title'}`}>
           Developing the Frontend
         </h2>
