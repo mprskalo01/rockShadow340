@@ -21,10 +21,10 @@ const SkillCategory: React.FC<SkillCategoryProps> = ({ title, skills }) => {
 
   return (
     <div
-      className={`rounded-3xl p-6 shadow-lg ${
+      className={`rounded-3xl border-b border-t p-6 shadow-lg ${
         isColorized
           ? 'bg-gradient-to-t from-cyan-200 to-cyan-600'
-          : 'bg-zinc-800'
+          : 'border-zinc-400 bg-zinc-800'
       } flex h-full flex-col`}
     >
       <h2
@@ -34,16 +34,14 @@ const SkillCategory: React.FC<SkillCategoryProps> = ({ title, skills }) => {
       >
         {title}
       </h2>
-      <div
-        className={`rounded-xl pb-4 ${gridClasses} flex-grow ${
-          isColorized ? 'color-border-gradient' : 'border-gradient'
-        }`}
-      >
+      <div className={`rounded-xl pb-4 ${gridClasses} flex-grow`}>
         {skills.map((skill, index) => (
           <div
             key={index}
-            className={`group flex flex-col items-center justify-between rounded-xl p-4 shadow-lg transition-all duration-500 hover:scale-110 ${
-              isColorized ? 'bg-gradient-to-t from-pink-200 to-pink-600' : ''
+            className={`group flex flex-col items-center justify-between rounded-xl border p-4 shadow-lg transition-all duration-500 hover:scale-110 ${
+              isColorized
+                ? 'border-black bg-gradient-to-t from-pink-200 to-pink-600'
+                : 'border-zinc-400'
             } ${title === 'Optimization' && index === 2 ? 'col-span-2' : ''}`}
           >
             <div className="mb-2 h-12 w-12 transition-all duration-500 group-hover:scale-125">
