@@ -11,16 +11,21 @@ const Hero: React.FC = () => {
           Development and Modern Web Technologies
         </h1> */}
         <h2 className={`${isColorized ? 'color-title' : 'title'}`}>
-          Developing the Frontend
+          Developing the front end
         </h2>
       </div>
       <div className="text-center">
         <h2 className={`${isColorized ? 'color-subtitle' : 'subtitle'}`}>
-          with Backend integration
+          with back-end integration
         </h2>
+        <h3
+          className={`text-center text-sm ${isColorized ? 'text-black' : 'text-white'}`}
+        >
+          ( Currently updating this site )
+        </h3>
       </div>
       <div className="mt-12 flex flex-col gap-4 text-center">
-        <a href="/MarioPrskaloResume.pdf" download>
+        {/* <a href="/MarioPrskaloResume.pdf" download>
           <button
             className={`w-32 rounded-lg py-2 font-extrabold shadow-lg transition-all duration-500 hover:scale-105 ${
               isColorized
@@ -30,7 +35,7 @@ const Hero: React.FC = () => {
           >
             View CV
           </button>
-        </a>
+        </a> */}
         <a
           href="mailto:mario.prskalo5@gmail.com?subject=Interested%20in%20Your%20Work"
           target="_blank"

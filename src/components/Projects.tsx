@@ -25,11 +25,11 @@ const Projects: React.FC = () => {
         <h2 className={`text-center ${isColorized ? 'color-title' : 'title'}`}>
           &lt;Projects /&gt;
         </h2>
-        <h2
+        <h3
           className={`text-center text-sm ${isColorized ? 'text-black' : 'text-white'}`}
         >
           Detailed project breakdown in the GitHub readme
-        </h2>
+        </h3>
       </div>
 
       <div className="flex flex-col gap-16 xl:gap-24">
