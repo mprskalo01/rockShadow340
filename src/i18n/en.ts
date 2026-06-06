@@ -11,7 +11,7 @@ export const en: TranslationMap = {
     kicker: 'Index — Introduction',
     headline: 'Designed to last.\nBuilt to scale.',
     roleLabel: 'Role',
-    role: 'Full-Stack Engineer',
+    role: 'Software Engineer',
     locationLabel: 'Location',
     location: 'Europe',
     statusLabel: 'Status',

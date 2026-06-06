@@ -11,11 +11,11 @@ export const hr: TranslationMap = {
     kicker: 'Indeks — Uvod',
     headline: 'Designed to last.\nBuilt to scale.',
     roleLabel: 'Uloga',
-    role: 'Full-Stack Engineer',
+    role: 'Software Engineer',
     locationLabel: 'Lokacija',
     location: 'Europa',
     statusLabel: 'Status',
-    status: 'Otvoren za odabrane projekte',
+    status: 'Dostupan za odabrane projekte',
     cue: 'Skrolaj',
   },
   work: {
@@ -32,7 +32,7 @@ export const hr: TranslationMap = {
   about: {
     title: 'O meni',
     bio: 'Software engineer koji gradi stvari. Od jedne komponente do distribuiranog sustava.',
-    note: 'Trenutno zaposlen na puno radno vrijeme. Otvoren za odabrane freelance i honorarne angažmane.',
+    note: 'Trenutno zaposlen na puno radno vrijeme. Dostupan za odabrane freelance i honorarne projekte.',
     capabilities: 'Sposobnosti',
   },
   contact: {

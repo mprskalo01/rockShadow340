@@ -11,11 +11,11 @@ export const de: TranslationMap = {
     kicker: 'Index — Einführung',
     headline: 'Designed to last.\nBuilt to scale.',
     roleLabel: 'Rolle',
-    role: 'Full-Stack Engineer',
+    role: 'Software Engineer',
     locationLabel: 'Standort',
     location: 'Europa',
     statusLabel: 'Status',
-    status: 'Offen für ausgewählte Projekte',
+    status: 'Verfügbar für ausgewählte Projekte',
     cue: 'Scrollen',
   },
   work: {
@@ -32,7 +32,7 @@ export const de: TranslationMap = {
   about: {
     title: 'Über mich',
     bio: 'Software-Engineer, der Dinge baut. Von einer einzelnen Komponente bis hin zu einem verteilten System.',
-    note: 'Derzeit in Vollzeitanstellung. Offen für ausgewählte Freelance und Teilzeitprojekte.',
+    note: 'Derzeit in Vollzeitanstellung. Verfügbar für ausgewählte Freelance und Teilzeitprojekte.',
     capabilities: 'Fähigkeiten',
   },
   contact: {
