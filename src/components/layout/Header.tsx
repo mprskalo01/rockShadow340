@@ -1,54 +1,42 @@
 import { useState, useEffect } from 'react'
+import useTranslation from '../../hooks/useTranslation'
+import LanguageSelector from '../ui/LanguageSelector'
 import ThemeToggleButton from '../ui/ThemeToggleButton'
 
 export default function Header() {
+  const { t } = useTranslation()
   const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
     function onScroll() {
-      setScrolled(window.scrollY > 10)
+      setScrolled(window.scrollY > 60)
     }
+    onScroll()
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
   return (
-    <header
-      className={`sticky top-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? 'border-b border-[var(--color-border)] bg-[var(--color-bg)]/90 backdrop-blur-md'
-          : 'bg-transparent'
-      }`}
-    >
-      <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4 md:px-12">
-        <button
-          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          className="text-lg font-bold tracking-tight text-[var(--color-text)] transition-colors duration-150 hover:text-[var(--color-accent)]"
-        >
-          Mario
-        </button>
-
-        <nav className="flex items-center gap-6">
-          <a
-            href="#skills"
-            className="hidden text-sm text-[var(--color-muted)] transition-colors duration-150 hover:text-[var(--color-text)] sm:block"
-          >
-            Skills
+    <header className={`header${scrolled ? ' header--scrolled' : ''}`}>
+      <div className="container header__inner">
+        <a className="header__logo" href="#intro">
+          Mario Prskalo
+        </a>
+        <nav className="header__nav" aria-label="Primary">
+          <a className="text-link" href="#work">
+            {t('nav.work')}
           </a>
-          <a
-            href="#projects"
-            className="hidden text-sm text-[var(--color-muted)] transition-colors duration-150 hover:text-[var(--color-text)] sm:block"
-          >
-            Projects
+          <a className="text-link" href="#about">
+            {t('nav.about')}
           </a>
-          <a
-            href="#contact"
-            className="hidden text-sm text-[var(--color-muted)] transition-colors duration-150 hover:text-[var(--color-text)] sm:block"
-          >
-            Contact
+          <a className="text-link" href="#contact">
+            {t('nav.contact')}
           </a>
-          <ThemeToggleButton />
         </nav>
+        <div className="header__controls">
+          <LanguageSelector />
+          <ThemeToggleButton />
+        </div>
       </div>
     </header>
   )

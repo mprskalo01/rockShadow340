@@ -1,33 +1,26 @@
-import { createContext, useState, useEffect, type ReactNode } from 'react'
+import { useState, useEffect, type ReactNode } from 'react'
+import type { Theme } from '../types'
+import { ThemeContext } from './theme-context'
 
-interface ThemeContextValue {
-  isDark: boolean
-  toggle: () => void
-}
-
-export const ThemeContext = createContext<ThemeContextValue | undefined>(undefined)
-
-function getInitialTheme(): boolean {
+function getInitialTheme(): Theme {
   const stored = localStorage.getItem('theme')
-  if (stored) return stored === 'dark'
-  return true // dark is the design default; stored preference overrides on return visits
+  if (stored === 'dark' || stored === 'light') return stored
+  return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
 }
 
 export default function ThemeProvider({ children }: { children: ReactNode }) {
-  const [isDark, setIsDark] = useState<boolean>(getInitialTheme)
+  const [theme, setTheme] = useState<Theme>(getInitialTheme)
 
   useEffect(() => {
-    document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light')
-    localStorage.setItem('theme', isDark ? 'dark' : 'light')
-  }, [isDark])
+    document.documentElement.setAttribute('data-theme', theme)
+    localStorage.setItem('theme', theme)
+  }, [theme])
 
   function toggle() {
-    setIsDark((prev) => !prev)
+    setTheme((prev) => (prev === 'dark' ? 'light' : 'dark'))
   }
 
   return (
-    <ThemeContext.Provider value={{ isDark, toggle }}>
-      {children}
-    </ThemeContext.Provider>
+    <ThemeContext.Provider value={{ theme, toggle }}>{children}</ThemeContext.Provider>
   )
 }

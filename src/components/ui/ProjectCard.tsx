@@ -1,64 +1,61 @@
+import type { CSSProperties } from 'react'
+import useIntersection from '../../hooks/useIntersection'
+import useTranslation from '../../hooks/useTranslation'
+import ProjectMedia from './ProjectMedia'
+import TechTag from './TechTag'
+import TextLink from './TextLink'
 import type { Project } from '../../types'
-import { GitHubIcon } from '../icons/SocialIcons'
 
 interface ProjectCardProps {
   project: Project
-  index: number
+  index: number // 1-based
 }
 
 export default function ProjectCard({ project, index }: ProjectCardProps) {
-  const isEven = index % 2 === 0
+  const { t } = useTranslation()
+  const ref = useIntersection<HTMLElement>()
+  const num = String(index).padStart(2, '0')
+  // CSS custom property feeds the scroll-reveal stagger; not in CSSProperties typings.
+  const style = { '--card-index': index - 1 } as CSSProperties
 
   return (
-    <div className="flex flex-col gap-6 xl:flex-row xl:items-center xl:gap-12">
-      <div className={`overflow-hidden rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] xl:flex-[3] ${!isEven ? 'xl:order-2' : ''}`}>
-        <img
-          src={project.imageUrl}
-          alt={`${project.title} project screenshot`}
-          loading="lazy"
-          className="h-full w-full object-cover transition-transform duration-300 hover:scale-[1.02]"
-        />
+    <article ref={ref} className="project reveal" style={style}>
+      <div className="project__media" aria-hidden="true">
+        <ProjectMedia visual={project.visual} />
       </div>
-
-      <div className={`flex flex-col justify-center xl:flex-[2] ${!isEven ? 'xl:order-1' : ''}`}>
-        <h3 className="text-2xl font-bold tracking-tight text-[var(--color-text)]">
-          {project.title}
-        </h3>
-        <p className="mt-3 text-sm leading-relaxed text-[var(--color-muted)]">
-          {project.description}
-        </p>
-        <div className="mt-4 flex flex-wrap gap-2">
-          {project.stack.map((tech) => (
-            <span
-              key={tech}
-              className="rounded-md border border-[var(--color-border)] px-2 py-0.5 font-mono text-xs text-[var(--color-muted)]"
-            >
-              {tech}
-            </span>
+      <span className="project__index" aria-hidden="true">
+        {num}
+      </span>
+      <div className="project__main">
+        <p className="project__tagline">{project.tagline}</p>
+        <h3 className="project__title">{project.title}</h3>
+        <dl className="project__meta">
+          <div className="project__meta-item">
+            <dt className="project__meta-label">{t('work.roleLabel')}</dt>
+            <dd className="project__meta-value">{project.role}</dd>
+          </div>
+          <div className="project__meta-item">
+            <dt className="project__meta-label">{t('work.yearLabel')}</dt>
+            <dd className="project__meta-value">{project.year}</dd>
+          </div>
+        </dl>
+        <p className="project__desc">{project.description}</p>
+        <ul className="project__tags">
+          {project.stack.map((s) => (
+            <TechTag key={s} label={s} />
           ))}
-        </div>
-        <div className="mt-6 flex items-center gap-4">
-          <a
-            href={project.githubUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-sm font-semibold text-[var(--color-text)] transition-colors duration-150 hover:text-[var(--color-accent)]"
-          >
-            <GitHubIcon className="h-4 w-4" />
-            View on GitHub
-          </a>
+        </ul>
+        <div className="project__links">
           {project.liveUrl && (
-            <a
-              href={project.liveUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm font-semibold text-[var(--color-muted)] transition-colors duration-150 hover:text-[var(--color-accent)]"
-            >
-              Live demo ↗
-            </a>
+            <TextLink href={project.liveUrl} external>
+              {t('work.viewProject')} →
+            </TextLink>
           )}
+          <TextLink href={project.githubUrl} external>
+            {t('work.source')} →
+          </TextLink>
         </div>
       </div>
-    </div>
+    </article>
   )
 }

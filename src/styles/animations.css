@@ -1,0 +1,98 @@
+/* will-change is applied ONLY to hero elements (per the spec). */
+.hero__headline,
+.hero__meta,
+.hero__rule {
+  will-change: transform, opacity;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(32px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes draw-x {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+/*
+ * Motion is OPT-IN: elements are at their final visible state by default, so
+ * users with reduced-motion (and any non-animating fallback) simply see content.
+ */
+@media (prefers-reduced-motion: no-preference) {
+  /* Page-load sequence */
+  .load-headline {
+    animation: rise 700ms var(--ease) 100ms both;
+  }
+
+  .load-subtext {
+    animation: rise 700ms var(--ease) 220ms both;
+  }
+
+  .load-rule {
+    transform-origin: left;
+    animation: draw-x 500ms var(--ease) 500ms both;
+  }
+
+  .load-cue {
+    animation: rise 700ms var(--ease) 620ms both;
+  }
+
+  .header::after {
+    animation: draw-x 600ms var(--ease) both;
+  }
+
+  .header__nav .text-link {
+    opacity: 0;
+    animation: fade 400ms var(--ease) both;
+  }
+  .header__nav .text-link:nth-child(1) {
+    animation-delay: 300ms;
+  }
+  .header__nav .text-link:nth-child(2) {
+    animation-delay: 360ms;
+  }
+  .header__nav .text-link:nth-child(3) {
+    animation-delay: 420ms;
+  }
+
+  /* Scroll reveals */
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition:
+      opacity 500ms var(--ease),
+      transform 500ms var(--ease);
+    transition-delay: calc(var(--card-index, 0) * 80ms);
+  }
+
+  .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .header::after {
+    transform: scaleX(1);
+  }
+}

@@ -1,0 +1,219 @@
+/* ---------- Text link (draw-in / retract-out underline) ---------- */
+.text-link {
+  position: relative;
+  display: inline-block;
+}
+
+.text-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 200ms var(--ease);
+}
+
+.text-link:hover::after,
+.text-link:focus-visible::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.text-link .arrow {
+  display: inline-block;
+  transition: transform 200ms var(--ease);
+}
+
+.text-link:hover .arrow {
+  transform: translateX(4px);
+}
+
+/* ---------- Tech tag ---------- */
+.tag {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-muted);
+  border: 1px solid var(--color-border);
+  padding: 0.28rem 0.6rem;
+  transition:
+    transform 200ms var(--ease),
+    color 200ms var(--ease),
+    border-color 200ms var(--ease);
+}
+
+.tag:nth-child(2) {
+  transition-delay: 30ms;
+}
+.tag:nth-child(3) {
+  transition-delay: 60ms;
+}
+.tag:nth-child(4) {
+  transition-delay: 90ms;
+}
+.tag:nth-child(5) {
+  transition-delay: 120ms;
+}
+
+/* ---------- Project card ---------- */
+.project {
+  position: relative;
+  padding-block: 3rem;
+  border-top: 1px solid var(--color-border);
+  overflow: hidden;
+}
+
+.work__list .project:last-child {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.project::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--color-text);
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 200ms var(--ease);
+}
+
+.project:hover::before {
+  transform: scaleY(1);
+}
+
+.project__index {
+  position: absolute;
+  top: 1.5rem;
+  right: 0;
+  font-family: var(--font-display);
+  font-size: clamp(5rem, 14vw, 9rem);
+  line-height: 1;
+  color: var(--color-text);
+  opacity: 0.1;
+  pointer-events: none;
+  transition:
+    opacity 300ms var(--ease),
+    transform 300ms var(--ease);
+}
+
+.project:hover .project__index {
+  opacity: 0.16;
+  transform: translateX(-4px);
+}
+
+/* Domain-relevant background line-art — bleeds toward the right edge, behind text. */
+.project__media {
+  position: absolute;
+  top: 50%;
+  right: -2%;
+  width: clamp(18rem, 46%, 34rem);
+  transform: translateY(-50%);
+  color: var(--color-text);
+  opacity: 0.05;
+  pointer-events: none;
+  transition: opacity 300ms var(--ease);
+}
+
+.project:hover .project__media {
+  opacity: 0.08;
+}
+
+.project-media__svg {
+  width: 100%;
+  height: auto;
+}
+
+.project__main {
+  position: relative;
+  max-width: 60ch;
+  padding-left: 1.5rem;
+}
+
+.project__tagline {
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: var(--color-muted);
+  margin-bottom: 0.75rem;
+}
+
+.project__title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  line-height: 1;
+  transition: transform 250ms var(--ease);
+}
+
+.project:hover .project__title {
+  transform: translateX(6px);
+}
+
+.project__meta {
+  display: flex;
+  gap: 2.5rem;
+  margin-top: 1.25rem;
+}
+
+.project__meta-label {
+  font-size: 0.58rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--color-muted);
+}
+
+.project__meta-value {
+  font-size: 0.85rem;
+  margin-top: 0.2rem;
+}
+
+.project__desc {
+  margin-top: 1.25rem;
+  max-width: 60ch;
+  line-height: 1.65;
+  color: var(--color-muted);
+}
+
+.project__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.project:hover .tag {
+  transform: translateY(-2px);
+  color: var(--color-text);
+  border-color: var(--color-muted);
+}
+
+.project__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 1.75rem;
+  font-size: 0.8rem;
+}
+
+/* ---------- Work archive line ---------- */
+.work__more {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-top: 2rem;
+  font-size: 0.8rem;
+}
+
+.work__more > span {
+  font-size: 0.62rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--color-muted);
+}
