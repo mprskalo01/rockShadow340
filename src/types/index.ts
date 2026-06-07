@@ -16,6 +16,15 @@ export interface Project {
   liveUrl?: string
 }
 
+/** A secondary repository surfaced in the Work archive list (English only, like taglines). */
+export interface ArchiveEntry {
+  name: string
+  note: string
+  tech: string
+  year: string
+  githubUrl: string
+}
+
 export interface SkillCategory {
   title: string
   skills: string[]
